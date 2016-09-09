@@ -1,0 +1,14 @@
+{
+  "name": "assemble.d",
+  "version": "1.0.0",
+  "description": "Compile *.d/ directories into files ",
+  "bin": {
+    "assemble": "assemble"
+  },
+  "repository": {
+    "type": "git",
+    "url": "scm@archive.eldergods.com/assemble"
+  },
+  "author": "rektide de la faye",
+  "license": "X"
+}
