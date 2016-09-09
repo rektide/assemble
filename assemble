@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+# drop preexisting assembled files that are in place
+for dir in *\.d ; do
+	rm -f ${dir%.d}
+done
+
+# compile all .d directories into their file
+for dir in *\.d ; do
+
+	# would be good enough but want some file names interleaved
+	#(cd $dir; cat *) > ${dir%.d}
+
+	out=${dir%.d}
+	rm -f $out
+	for f in $dir/* ; do
+		echo "# $f" >> $out
+		cat $f >> $out
+		echo >> $out
+	done
+
+done
